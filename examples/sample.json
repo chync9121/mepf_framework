@@ -1,0 +1,8 @@
+{
+  "id": "demo-001",
+  "text": "A suspicious news claim paired with an image.",
+  "image_path": "/path/to/image.jpg",
+  "metadata": {
+    "dataset": "demo"
+  }
+}

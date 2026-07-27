@@ -1,0 +1,21 @@
+{
+  "semantic_threshold_tau": 0.55,
+  "forensics_threshold": 0.50,
+  "max_planning_steps": 3,
+  "semantic_model": {
+    "clip_model_name": "openai/clip-vit-large-patch14",
+    "checkpoint_path": "models/best_robust_model_newsclippings_frozen.pth",
+    "alpha": 0.5
+  },
+  "forensics_model": {
+    "checkpoint_path": "2_ai/NPR.pth",
+    "image_size": 256
+  },
+  "retrieval": {
+    "provider": "google_search",
+    "top_k": 5
+  },
+  "reasoner": {
+    "backbone": "gpt-4o"
+  }
+}
