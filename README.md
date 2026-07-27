@@ -20,11 +20,6 @@ The structure follows the paper:
   - Threshold sensitivity
   - Efficiency and cost analysis
 
-Existing code mapping:
-
-- `1_common`: semantic CLIP fusion and dynamic gating training code
-- `2_ai`: NPR/ResNet visual forensics detector
-- `3_news`: retrieval logs, planning-agent notebooks, MLLM final verdict notebooks
 
 Run the demo:
 
