@@ -11,6 +11,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from ..schema import EvidenceItem, NewsSample, Verdict
+from .prompts import FACT_CHECKING_SYSTEM_PROMPT
 from .tools import RetrievalToolbox, SearchResult
 
 
@@ -34,6 +35,9 @@ class PlanningAgent:
     ) -> None:
         self.max_steps = max_steps
         self.reasoner_config = reasoner_config
+        self.system_prompt = reasoner_config.get(
+            "system_prompt", FACT_CHECKING_SYSTEM_PROMPT
+        )
         self.toolbox = toolbox or RetrievalToolbox(retrieval_config)
 
     def verify(self, sample: NewsSample) -> tuple[Verdict, list[EvidenceItem], str]:
